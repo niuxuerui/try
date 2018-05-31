@@ -7,7 +7,14 @@ $headerColor:green;
 
 header {
     @include wh($m, pxTorem(40px));
-    background: green;
+    background: greenyellow;
+    text-align: center;
     color: #fff;
     font-size: pxTorem(20px);
+}
+
+.index-ct1 {
+    width: pxTorem(100px);
+    height: pxTorem(100px);
+    background: yellow;
 }

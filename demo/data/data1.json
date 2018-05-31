@@ -1,0 +1,27 @@
+{
+
+    "data": {
+        "banner": [],
+        "list": [{
+            "img": "./banner/1.img",
+            "title": "标题",
+            "info": "详细信息"
+        }, {
+            "img": "./banner/1.img",
+            "title": "标题2",
+            "info": "详细信息"
+        }, {
+            "img": "./banner/1.img",
+            "title": "标题3",
+            "info": "详细信息"
+        }, {
+            "img": "./banner/1.img",
+            "title": "标题4",
+            "info": "详细信息"
+        }, {
+            "img": "./banner/1.img",
+            "title": "标题5",
+            "info": "详细信息"
+        }]
+    }
+}
