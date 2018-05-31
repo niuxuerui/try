@@ -1,0 +1,110 @@
+/*
+1.变量
+2.@mixin       不带参数的，带参数的，参数带默认值的
+  @include
+  模块化外链     @import 引用外部文件
+3.自定义函数
+  @function
+  函数名
+  自定义的函数  
+  @function（参数）{
+    条件语句
+    循环语句
+  }
+4.% 占位符
+5.继承
+*/
+
+$color:red;
+@mixin hidden {
+    overflow: hidden;
+}
+
+@mixin repos() {
+    position: relative;
+}
+
+@mixin abpos($left:0, $top:0) {
+    position: absolute;
+    left: $left;
+    top: $top;
+}
+
+@mixin sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin f-d($d:row) {
+    //弹性盒子方向
+    flex-direction: $d;
+}
+
+$browser-default-font-size:37.5px !default;
+@function pxTorem($px) {
+    @return $px/$browser-default-font-size*1rem;
+}
+
+//定位居中
+@mixin aCenter() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//给box-sizing 和左右的padding
+@mixin boxRL($rl) {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 $rl;
+}
+
+//图片 100%
+@mixin img() {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+//弹性盒子 让子项目 居中
+@mixin fc() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//单行文本
+@mixin tc() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+//多行文本
+@mixin dc() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+/*自定义函数*/
+
+@function double($num) {
+    @return $num*10;
+}
+
+@function m($w, $h) {
+    @return $w
+}

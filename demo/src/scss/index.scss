@@ -1,0 +1,13 @@
+@import "./mixin.scss";
+$m:100%;
+$headerColor:green;
+.wrap {
+    @include wh($m, $m);
+}
+
+header {
+    @include wh($m, pxTorem(40px));
+    background: green;
+    color: #fff;
+    font-size: pxTorem(20px);
+}
